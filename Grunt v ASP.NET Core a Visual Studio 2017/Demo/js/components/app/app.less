@@ -1,0 +1,25 @@
+.app {
+    height: 1vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    right: -17px;
+
+    .app__content {
+        flex: 1 0 auto;
+        position: relative;
+        padding: 20px 0;
+
+        > .container {
+            width: 70%;
+            max-width: none;
+        }
+    }
+}

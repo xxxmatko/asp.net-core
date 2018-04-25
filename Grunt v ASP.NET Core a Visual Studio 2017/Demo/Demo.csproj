@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="js\components\app\" />
+    <Folder Include="js\libs\" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="echo { &quot;configuration&quot;: &quot;$(ConfigurationName)&quot; }&gt;&quot;$(ProjectDir)buildConfiguration.json&quot;" />
+  </Target>
+
+</Project>
